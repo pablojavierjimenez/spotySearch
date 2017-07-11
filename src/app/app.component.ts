@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  encapsulation: ViewEncapsulation.None,
+  selector: 'app',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'app';
+  public greeting = 'Hello Deloitte!';
+
+  changeGreeting() {
+    this.greeting = 'You button-clicker!';
+  }
 }
