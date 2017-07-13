@@ -16,6 +16,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule, routedComponents } from './app-routing.module';
 
 import { ExampleFeatureModule } from './example-feature/example-feature.module';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { ExampleFeatureModule } from './example-feature/example-feature.module';
     HttpModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    ExampleFeatureModule
+    ExampleFeatureModule,
+    NavbarComponent
   ],
   declarations: [
     AppComponent,
