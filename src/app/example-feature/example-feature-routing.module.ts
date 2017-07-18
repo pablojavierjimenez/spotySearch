@@ -9,7 +9,7 @@ import { ExampleGuard } from './example.guard';
 import { LastFMResolver } from './lastfm.resolver';
 
 const routes: Routes = [
-  { path: 'feature', component: ExampleFeatureComponent,
+  { path: 'album', component: ExampleFeatureComponent,
     canActivate: [ExampleGuard],
     canActivateChild: [ExampleGuard],
     children: [

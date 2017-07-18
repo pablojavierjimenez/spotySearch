@@ -5,9 +5,9 @@ import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { ExampleFormComponent } from './example-form/example-form.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/hello' },
-  { path: 'hello', component: HelloWorldComponent },
-  { path: 'form', component: ExampleFormComponent }
+  { path: '', pathMatch: 'full', redirectTo: '/search' },
+  { path: 'search', component: HelloWorldComponent },
+  { path: 'artist', component: ExampleFormComponent }
 ];
 
 @NgModule({
