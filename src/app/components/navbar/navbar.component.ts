@@ -1,20 +1,15 @@
-/**
- * NAVBAR Component
- */
-import moduleName from 'module';
-
+import { Component } from '@angular/core';
 
 /**
- * NAVBAR Component Decorator
- * @param {Object} //configuration object
- * @example <navbar></navbar>
+ * ${componentName} Component Decorator
+ * Component TagName: <navbar></navbar>
  */
 @Component({
-    moduleId: module.id,
-    selector: 'navbar',
-    templateUrl: 'navbar.component.html',
-    styles: 'navbar.component.less'
-    
+  selector: 'navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.less']
 })
 
-export class NavbarComponent { }
+export class NavbarComponent {
+  public navbarText: String = 'Hello World! from a component.'
+}

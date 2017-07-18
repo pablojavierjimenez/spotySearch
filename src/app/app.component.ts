@@ -1,31 +1,25 @@
 /**
- * Import Depensences
- * @type {[type]}
+ * ${componentName} Component Imports
  */
-import { Component, ViewEncapsulation } from '@angular/core';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { Component } from '@angular/core';
 
 /**
- * App component decorator
- * @param {obj} {  encapsulation [Dependencie]
- * @example <app></app>
+ * ${componentName} Component Decorator
+ * Component TagName: <app></app>
  */
 @Component({
-  moduleId: module.id,
-  encapsulation: ViewEncapsulation.None, // Controler Dependencia
-  selector: 'app', // name of the usable component eg: <app></app>
-  templateUrl: './app.component.html', // Component HTML <app> tag template
-  styleUrls: ['./app.component.less'], // Component CSS
-  directives: [NavbarComponent]
+    selector: 'app',
+    templateUrl: 'app.component.html',
+    styleUrls: ['app.component.less']
 })
 
 /**
- * 
+ * ${componentName} Component Class
  */
 export class AppComponent {
-  public greeting = 'Hello Deloitte!';
+    public saludo = 'hola jota';
 
-  changeGreeting() {
-    this.greeting = 'You button-clicker!';
-  }
+    cambiarsaludo(){
+        this.saludo = 'botón';
+    }
 }
