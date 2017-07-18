@@ -18,8 +18,9 @@ import { Component } from '@angular/core';
  */
 export class AppComponent {
     public saludo = 'hola jota';
+    public appName = 'SpotySearch';
 
     cambiarsaludo(){
-        this.saludo = 'botón';
+        this.saludo = 'yuta botón';
     }
 }

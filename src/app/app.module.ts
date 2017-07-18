@@ -12,7 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeaderComponent } from './components/header/header.component';
-
+import { AppRoutingModule, routedComponents } from './app-routing.module';
 
 /**
  * NgModule Configuration component
@@ -21,10 +21,12 @@ import { HeaderComponent } from './components/header/header.component';
   imports: [
     BrowserModule,
     HttpModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,
+    routedComponents,
     HeaderComponent,
     NavbarComponent
   ],
