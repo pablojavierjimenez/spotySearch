@@ -11,5 +11,10 @@ import { Component } from '@angular/core';
 })
 
 export class HomeComponent {
-  public homeText: String = 'esta es la home.'
+  public homeText: String = 'esta es la home.';
+  public homeSaludo = 'hola jota';
+
+  cambiarsaludo(){
+      this.homeSaludo = 'yuta botón';
+  }
 }

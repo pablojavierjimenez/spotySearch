@@ -17,10 +17,6 @@ import { Component } from '@angular/core';
  * ${componentName} Component Class
  */
 export class AppComponent {
-    public saludo = 'hola jota';
+    // aca es donde ocurre la magia
     public appName = 'SpotySearch';
-
-    cambiarsaludo(){
-        this.saludo = 'yuta botón';
-    }
 }
