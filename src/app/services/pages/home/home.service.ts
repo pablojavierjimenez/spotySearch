@@ -22,7 +22,7 @@ export class HomeService {
 
   search(term: string): Observable<Hero[]> {
     return this.http
-               .get(`app/heroes/?name=${term}`)
+               .get(`https://pokeapi.co/api/v2/pokemon/1/`)
                .map(response => response.json().data as Hero[]);
   }
 }
