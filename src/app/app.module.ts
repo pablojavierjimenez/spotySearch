@@ -12,7 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeaderComponent } from './components/header/header.component';
-import { HomeService } from './services/pages/home/home.service';
+import { SearchComponent } from './components/search/search.component';
 import { AppRoutingModule, routedComponents } from './app-routing.module';
 
 /**
@@ -29,9 +29,9 @@ import { AppRoutingModule, routedComponents } from './app-routing.module';
     AppComponent,
     routedComponents,
     HeaderComponent,
-    NavbarComponent
+    NavbarComponent,
+    SearchComponent
   ],
-  providers: [ HomeService ],
   bootstrap: [AppComponent]
 })
 

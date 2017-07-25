@@ -11,5 +11,5 @@ import { Component } from '@angular/core';
 })
 
 export class HeaderComponent {
-  public headerTitle: String = 'spotySearch'
+  public headerTitle: String = 'SpotySearch'
 }

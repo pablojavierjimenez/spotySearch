@@ -1,0 +1,14 @@
+<div class="search-component">
+  <h4>Hero Search</h4>
+  <input
+    type='search'
+    placeholder="nombre de el artista..."
+    #searchBox id="search-box"
+    (keyup)="search(searchBox.value)" />
+  <div class="search-result__container" >
+    <div *ngFor="let hero of heroes | async"
+         (click)="gotoDetail(hero)" class="search-result" >
+      {{hero.name}}
+    </div>
+  </div>
+</div>
