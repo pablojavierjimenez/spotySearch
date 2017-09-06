@@ -3,60 +3,65 @@
  */
  @import '../../../globals';
 
-.sps_artistList{
+ .sps_artistList{
 
-  .randomColor();
+   .randomColor();
 
-  &__container {
-    padding: .5rem;
-  }
+   &__container {
+     padding: .5rem;
+   }
 
-  &__artist {
-    font-size: 1.8rem;
-    margin: 1rem .5rem;
-    box-sizing: border-box;
-    max-height: 6rem;
-    color: @geen_logo;
-    text-decoration: none;
-    background-color: hsl(0, 0%, 0%);
-    display: flex;
-    justify-content: space-between;
-    padding: .5rem .5rem .5rem 1rem;
-    align-items: center;
-    border-radius: 3rem;
-    border: .2rem solid hsl(122, 41%, 45%);
-    &_name {
-      color: @geen_logo;
-      text-decoration: none;
-    }
-    &_name:hover{
-      color: #2a9fd6;
-    }
+   &__artist {
+     font-size: 1.8rem;
+     margin: 1rem .5rem;
+     box-sizing: border-box;
+     max-height: 6rem;
+     color: @geen_logo;
+     text-decoration: none;
+     background-color: hsl(0, 0%, 0%);
+     display: flex;
+     justify-content: space-between;
+     padding: .5rem .5rem .5rem 1rem;
+     align-items: center;
+     border-radius: 3rem;
+     border: .2rem solid hsl(122, 41%, 45%);
+     &_name {
+       color: @geen_logo;
+       text-decoration: none;
+     }
+     &_name:hover{
+       color: #2a9fd6;
+     }
+     a &_genres {
+       font-size: .9rem;
+       font-style: italic;
+       color: white;
+       margin-left: .5rem;
+     }
+     &_imageContainer{
+       background-color: transparent;
+     }
+     &_image {
+       background-color: @color;
+       display: block;
+       width: 5rem;
+       height: 5rem;
+       background-position: center;
+       background-size: cover;
+       border-radius: 50%;
+       border: .2rem solid;
+       padding: .2rem;
+     }
 
-    &_imageContainer{
-      background-color: transparent;
-    }
-    &_image {
-      background-color: @color;
-      display: block;
-      width: 5rem;
-      height: 5rem;
-      background-position: center;
-      background-size: cover;
-      border-radius: 50%;
-      border: .2rem solid;
-      padding: .2rem;
-    }
+     @media (max-width: 960px) {
+       font-size: 1.6rem;
+       border: .2rem solid;
+       &_image{
+         width: 3rem;
+         height: 3rem;
+         border: none;
+       }
+     }
+   }
 
-    @media (max-width: 960px) {
-      font-size: 1.6rem;
-      border: .2rem solid;
-      &_image{
-        width: 3rem;
-        height: 3rem;
-        border: none;
-      }
-    }
-  }
-
-}
+ }
