@@ -1,3 +1,16 @@
-body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+.sps_app {
+  &__container {
+    background-color: hsl(123, 41%, 45%);
+    color: #ffffff;
+    min-height: 90vh;
+    margin: auto;
+    padding: 1rem 2rem;
+    width: 100%;
+    max-width: 70rem;
+    box-shadow: inset 1px 1px 20px 0px hsl(100,100%,0%);
+
+    @media (max-width: 960px) {
+      background-color: hsl(0, 100%, 0%,);
+    }
+  }
 }

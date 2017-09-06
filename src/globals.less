@@ -1,0 +1,50 @@
+
+/*
+ * COLORS
+ */
+ @geen_logo: hsl(123, 41%, 45%);
+ @light_blue: hsl(199, 68%, 52%);
+ @blue_dark: hsl(218, 100%, 23%);
+ @orange:hsl(28, 100%, 44%);
+ @orange_dark:hsl(28, 100%, 44%);
+ @white:hsl(0, 0%, 100%);
+ @beige:hsl(0, 0%, 96%);
+ @red:rgba(247, 11, 14, 0.50);
+ @black_medium: hsl(40, 10%, 28%);
+ @box_shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+ @yellow: hsl(43, 98%, 53%);
+
+
+ /*
+  * FONTS
+  */
+  @import url('https://fonts.googleapis.com/css?family=Archivo');
+  @import url('https://fonts.googleapis.com/css?family=Archivo|Roboto');
+  @import url('https://fonts.googleapis.com/css?family=Shrikhand');
+
+  @rootFontsize: 10px;
+
+ /*
+  * BREACKPOINT
+  */
+ @bpt_tablet_landscape:960px;
+ @bpt_tablet_portrate:78rem;
+ @bpt_tablet_mobile:40rem;
+
+
+ /*
+  * MEDIAQUERY
+  */
+
+
+ /*
+  * image PATH
+  */
+  @header_imagePath: url(../assets/header-bg.jpg);
+
+
+.randomColor(){
+  @randomColor: `Math.floor(Math.random()*16777215).toString(16)`;
+  @colorHex: e(@randomColor);
+  @color: ~"#@{colorHex}";
+}

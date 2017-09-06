@@ -1,54 +1,32 @@
-import { TestBed, async, fakeAsync, tick } from '@angular/core/testing';
-import { NO_ERRORS_SCHEMA } from '@angular/core';
-import { BrowserModule, By } from '@angular/platform-browser';
-import { HttpModule } from '@angular/http';
+import { TestBed, async } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
 
-describe('App', () => {
-  beforeEach(() => {
-    TestBed.configureTestingModule({ 
-     imports: [
-       BrowserModule,
-       HttpModule
-     ],
-     declarations: [AppComponent],
-     schemas: [NO_ERRORS_SCHEMA]
-    });
-  });
+describe('AppComponent', () => {
   beforeEach(async(() => {
-    TestBed.compileComponents();
+    TestBed.configureTestingModule({
+      declarations: [
+        AppComponent
+      ],
+    }).compileComponents();
   }));
 
-  it ('should create the component', () => {
-    //We can create components.
-    let fixture = TestBed.createComponent(AppComponent);
-    //And do any asserts we want.
-    expect(fixture.componentInstance instanceof AppComponent).toBe(true, 'should create AppComponent');
-  });
+  it('should create the app', async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app).toBeTruthy();
+  }));
 
-  it ('should listen to events', () => {
-    let fixture = TestBed.createComponent(AppComponent);
-    //We get the debug element.
-    fixture.debugElement.query(By.css('button'))
-      //You can pass a parameter to the handler. Event can be custom event.
-      .triggerEventHandler('click', undefined);
-    //We trigger change detection to let Angular know about the change.
+  it(`should have as title 'app'`, async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app.title).toEqual('app');
+  }));
+
+  it('should render title in a h1 tag', async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-
-    expect(fixture.componentInstance.greeting).toBe('You button-clicker!');
-  });
-
-  it ('should update the view', () => {
-    let fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    
-    expect(fixture.nativeElement.textContent).toContain('Hello Deloitte!');
-    //We trigger change detection to let Angular know about the change.
-    fixture.componentInstance.greeting = 'New value'
-    fixture.detectChanges();
-
-    expect(fixture.componentInstance.greeting).toBe('New value');
-  });
-  
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
+  }));
 });

@@ -1,0 +1,12 @@
+<section class="sps_home__container">
+
+  <p><strong>Welcome to</strong></p>
+  <h1 class="sps_home_pageName">Spotisearch</h1>
+
+  <p>Search your favorite songs over Spotify, just enter an artist's name in the following search box and enjoy!</p>
+
+  <app-search (searchResponse)="setResponseResult($event)" searchType="artist"></app-search>
+
+  <app-artist-list [artistData]="artistDataFromSearch"></app-artist-list>
+
+</section>

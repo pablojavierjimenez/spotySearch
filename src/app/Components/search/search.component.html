@@ -1,0 +1,12 @@
+<h1>{{searchTitle}}</h1>
+<form class="sps_search__formContainer">
+  <div class="form-grup">
+    <input
+      type="text"
+      class="sps_search__formInput form-control"
+      name="searchStr"
+      placeholder="Search Music"
+      [(ngModel)]="searchStr"
+      (keyup)="searchMusic()" />
+  </div>
+</form>

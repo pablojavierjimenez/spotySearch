@@ -1,28 +1,24 @@
-/**
- * Import Depensences
- * @type {[type]}
- */
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
+import { Http, Headers } from '@angular/http';
+import 'rxjs/add/operator/map';
 
-/**
- * App component decorator
- * @param {obj} {  encapsulation [Dependencie]
- * @example <app></app>
- */
 @Component({
-  encapsulation: ViewEncapsulation.None, // Controler Dependencia
-  selector: 'app', // name of the usable component eg: <app></app>
-  templateUrl: './app.component.html', // Component HTML <app> tag template
-  styleUrls: ['./app.component.less'] // Component CSS
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.less']
 })
 
-/**
- * 
- */
 export class AppComponent {
-  public greeting = 'Hello Deloitte!';
+  private url: string;
+  myData: Array<any>;
+  constructor(http: Http) {
+    this.url = 'https://jsonplaceholder.typicode.com/photos';
 
-  changeGreeting() {
-    this.greeting = 'You button-clicker!';
+    http.get('this.url')
+      // Call map on the response observable to get the parsed people object
+      .map(res => res.json())
+      // Subscribe to the observable to get the parsed people object and attach it to the
+      // component
+      .subscribe(res => this.myData = res);
   }
 }
