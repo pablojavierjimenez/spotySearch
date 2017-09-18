@@ -5,7 +5,7 @@
       <div class="sps_artistList__artist_name" (click)="selectArtist(artist.id)">
         {{artist.name}}
       </div>
-      <div>
+      <div class="sps_artistList__artist_genresContainer">
         <a *ngFor="let genre of artist.genres" class="sps_artistList__artist_genres" href="#{{genre}}">#{{genre}}</a>
       </div>
     </span>
