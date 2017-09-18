@@ -20,9 +20,9 @@ export class AuthService {
   }
 
   getToken() {
-    // const tokenDataFromStorage = JSON.parse( localStorage.getItem('tokenData') );
-    // return tokenDataFromStorage.token;
-    return this._token;
+    const tokenDataFromStorage = JSON.parse( localStorage.getItem('tokenData') );
+    return tokenDataFromStorage.token;
+    //return this._token;
   }
 
   setToken() {
@@ -41,7 +41,9 @@ export class AuthService {
 
   login() {
     localStorage.setItem('tokenData', '{}' );
-    window.location.href = this.baseUrl + this.clientId + this.responseType + this.redirectUrl;
+    let url = this.baseUrl + this.clientId + this.responseType + this.redirectUrl;
+    console.log(url);
+    window.location.href = url;
     return false;
   }
 
